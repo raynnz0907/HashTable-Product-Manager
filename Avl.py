@@ -51,3 +51,40 @@ class HashTable:
         for i, item in enumerate(self.table):
             print(f"{i} --> {item}")
 
+
+# ---------------- MAIN PROGRAM ----------------
+
+ht = HashTable()
+
+while True:
+    print("\n1. Add Product")
+    print("2. Search Product")
+    print("3. Display Table")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        name = input("Enter product name: ")
+        price = input("Enter product price: ")
+        ht.insert(name, price)
+
+    elif choice == '2':
+        name = input("Enter product name to search: ")
+        result = ht.search(name)
+
+        if result:
+            print(f"Product found! Price: {result}")
+        else:
+            print("Product not found!")
+
+    elif choice == '3':
+        ht.display()
+
+    elif choice == '4':
+        print("Exiting program...")
+        break
+
+    else:
+        print("Invalid choice! Try again.")
+
