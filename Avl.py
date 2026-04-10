@@ -30,3 +30,18 @@ class HashTable:
         self.table[index] = (key, value)
         print(f"Product '{key}' added successfully!")
 
+    # Search product
+    def search(self, key):
+        index = self.hash_function(key)
+
+        original_index = index
+        while self.table[index] is not None:
+            if self.table[index][0] == key:
+                return self.table[index][1]
+
+            index = self.rehash(index)
+            if index == original_index:
+                break
+
+        return None
+
