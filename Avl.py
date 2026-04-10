@@ -45,3 +45,9 @@ class HashTable:
 
         return None
 
+    # Display table
+    def display(self):
+        print("\nHash Table:")
+        for i, item in enumerate(self.table):
+            print(f"{i} --> {item}")
+
