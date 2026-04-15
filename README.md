@@ -42,3 +42,10 @@ print(hm.get("age"))   # 20
 hm.remove("age")
 print(hm.get("age"))   # None
 
+
+🎯 Conclusion
+
+Hash Maps are widely used because they provide fast and efficient data access. This implementation helps you understand the core concept behind them.
+
+
+
