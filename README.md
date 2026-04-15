@@ -29,3 +29,16 @@ hash_map.put("name", "Alice")
 hash_map.get("name")  # Alice
 ❌ Delete (Remove)
 hash_map.remove("name")
+
+Example usage
+
+hm = HashMap()
+
+hm.put("age", 20)
+hm.put("name", "John")
+
+print(hm.get("age"))   # 20
+
+hm.remove("age")
+print(hm.get("age"))   # None
+
